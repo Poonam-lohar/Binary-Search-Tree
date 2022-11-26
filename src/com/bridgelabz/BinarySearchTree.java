@@ -1,11 +1,10 @@
 package com.bridgelabz;
 
-/*
-UC1.Ability to create a BST by
-adding 56 and then adding 30 and 70
-UC2.Check if all are added with using size
-method in Binary Tree
- */
+     /**
+      *UC1.Ability to create a BST by adding 56 and then adding 30 and 70
+      * UC2.Check if all are added with using size method in Binary Tree
+      * UC3.Ability to search 63 in BSt Implement Search method and recursively search left or right nodes to find 63
+      */
 
 class Node {
     int data;
@@ -57,6 +56,30 @@ public class BinarySearchTree {
         else
             return(size(node.left) + 1 + size(node.right));
     }
+
+    public boolean nodePresent(Node root, int val) {
+        /**
+         * if root is empty then return false
+         */
+        if (root == null) {
+            return false;
+        }
+
+        Boolean isPresent = false;
+
+        while (root != null) {
+            if (val < root.data) {
+                root = root.left;
+            } else if (val > root.data) {
+                root = root.right;
+            } else {
+                isPresent = true;
+                break;
+            }
+        }
+        return isPresent;
+    }
 }
+
 
 

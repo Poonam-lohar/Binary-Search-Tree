@@ -23,5 +23,12 @@ public class BinarySearchMain {
         root = bst.insert(root, 67);
 
         bst.print(root);
+
+        System.out.println(bst.nodePresent(root, 63));
+
+        if (root != null)
+            System.out.println("\nElement 63 is present in the binary tree");
+        else
+            System.out.println("\nElement 63 is not present in the binary tree");
     }
 }
