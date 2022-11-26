@@ -1,8 +1,10 @@
 package com.bridgelabz;
 
 /*
-Ability to create a BST by
+UC1.Ability to create a BST by
 adding 56 and then adding 30 and 70
+UC2.Check if all are added with using size
+method in Binary Tree
  */
 
 class Node {
@@ -44,6 +46,16 @@ public class BinarySearchTree {
         print(root.left);
         System.out.println(root.data);
         print(root.right);
+    }
+    public int size(Node node) {
+        /*
+         *  if condition is true then node is empty if condition is false then
+         * else condition is worked
+         */
+        if (node == null)
+            return 0;
+        else
+            return(size(node.left) + 1 + size(node.right));
     }
 }
 
